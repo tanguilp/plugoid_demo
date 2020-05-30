@@ -5,6 +5,10 @@ to authenticate users.
 
 ![Plugoid Demo app main page](https://raw.githubusercontent.com/tanguilp/plugoid_demo/master/media/main_page.png)
 
+## Compatibility
+
+OTP 22+
+
 ## Launching the demo application
 
 In a shell, launch the following commands:
