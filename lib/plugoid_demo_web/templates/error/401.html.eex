@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome to Plugoid</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <style type="text/css">
+    <%= Makeup.stylesheet() %>
+    </style>
+  </head>
+
+  <body>
+    <div class="container"><img src="https://http.cat/401"/></div>
+    <div class="container">
+      <div class="phx-hero">
+        <p>Sorry, you must be authenticated to access this page.</p>
+        <p><a href="/">Go back to the main page</a></p>
+      </div>
+
+      <h2>Error</h2>
+      <p>
+      Reason: <%= Exception.message(@error) %>
+      </p>
+    </div> <!-- /container -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>

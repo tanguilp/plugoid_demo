@@ -1,0 +1,32 @@
+<h2>Authentication information</h2>
+<table>
+  <tr>
+    <td>Authenticated:</td>
+    <%= if authenticated?(@conn) do %>
+      <td style="color:limegreen"><strong>Yes</strong></td>
+    <% else %>
+      <td>No</td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>Redirected from OP::</td>
+    <%= if redirected_from_op?(@conn) do %>
+      <td>Yes</td>
+    <% else %>
+      <td>No</td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>Issuer:</td><td><code><%= issuer(@conn) %></code></td>
+  </tr>
+  <tr>
+    <td>User id (<code>sub</code>):</td><td><code><%= subject(@conn) %></code></td>
+  </tr>
+  <tr>
+    <td>Current ACR:</td><td><code><%= acr(@conn) %></code></td>
+  </tr>
+  <tr>
+    <td>Auth time (Erlang monotonic time):</td>
+    <td><code><%= auth_time(@conn) %></code></td>
+  </tr>
+</table>

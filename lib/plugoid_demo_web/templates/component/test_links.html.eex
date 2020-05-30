@@ -1,0 +1,14 @@
+<h2>Test pages</h2>
+<ul>
+  <li><a href="/private?a=1"><code>/private</code>: mandatory authentication</a></li>
+  <li><code>/private</code> with a POST form request
+    <form action="/private?a=1" method="post">
+      <input type="test" name="field" value="Some text value"/>
+      <input type="submit"/>
+    </form>
+  </li>
+  <li><a href="/public_private?b=2"><code>/public_private</code>: optional authentication</a></li>
+  <li><a href="/2factor?c=3"><code>/2factor</code>: voluntary request of a 2-factor authentication</a></li>
+  <li><a href="/2factor_mandatory?d=4"><code>/2factor_mandatory</code>: <strong>mandatory</strong> request of a 2-factor authentication</a></li>
+  <li><a href="/2factor_mandatory_fail?d=4"><code>/2factor_mandatory_fail</code>: <strong>mandatory</strong> existence of a 2-factor authentication</a></li>
+</ul>

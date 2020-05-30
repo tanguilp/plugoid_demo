@@ -1,0 +1,17 @@
+<section class="phx-hero">
+  <h1>Welcome to the Plugoid demo!</h1>
+  <p>An OpenID Connect plug for Phoenix</p>
+</section>
+
+<section class="row">
+  <article class="column">
+    <%= render(PlugoidDemoWeb.ComponentView, "test_links.html") %>
+  </article>
+  <article class="column">
+    <%= render(PlugoidDemoWeb.ComponentView, "auth_info.html", conn: @conn) %>
+  </article>
+</section>
+
+<section>
+  <%= render(PlugoidDemoWeb.ComponentView, "request_details.html", conn: @conn) %>
+</section>

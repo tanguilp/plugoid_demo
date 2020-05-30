@@ -1,0 +1,16 @@
+<h2>Request details</h2>
+
+<h3>Method</h3>
+<p>
+<%= method(@conn) %>
+</p>
+
+<h3>Query parameters</h3>
+<p>
+<%= query_params(@conn) %>
+</p>
+
+<h3>Body parameters</h3>
+<p>
+<%= body(@conn) %>
+</p>
