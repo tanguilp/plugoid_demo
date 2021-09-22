@@ -38,16 +38,17 @@ defmodule PlugoidDemo.MixProject do
   defp deps do
     [
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+      {:hackney, "~> 1.0"},
       {:makeup, "~> 1.0"},
       {:makeup_elixir, "~> 0.0"},
-      {:oauth2_token_manager, "~> 0.1"},
+      {:oauth2_token_manager, "~> 0.3"},
       {:jason, "~> 1.0"},
-      {:jti_register, "~> 0.1"},
+      {:jti_register, "~> 0.0"},
       {:phoenix, "~> 1.5.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:plug_cowboy, "~> 2.0"},
-      {:plugoid, "~> 0.1"},
+      {:plugoid, "~> 0.0"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"}
     ]
