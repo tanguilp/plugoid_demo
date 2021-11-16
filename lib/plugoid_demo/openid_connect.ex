@@ -4,12 +4,14 @@ defmodule PlugoidDemo.OpenIDConnect do
   alias PlugoidDemo.OpenIDConnect.Client
   alias OIDC.Auth.OPResponseSuccess
 
-  def token_callback(op_response, issuer, client_id, opts) do
+  def token_callback(conn, op_response, issuer, client_id, opts) do
     client_config = Client.get(client_id)
 
     maybe_register_access_token(op_response, issuer, client_config, opts)
     maybe_register_refresh_token(op_response, issuer, client_config, opts)
     OAuth2TokenManager.Claims.register_id_token(issuer, op_response.id_token)
+
+    conn
   end
 
   defp maybe_register_access_token(%OPResponseSuccess{access_token: nil}, _, _, _) do

@@ -5,7 +5,7 @@ defmodule PlugoidDemoWeb.Router do
   use Plugoid.RedirectURI,
     jti_register: JTIRegister.ETS,
     tesla_middlewares: [Tesla.Middleware.Logger],
-    token_callback: &PlugoidDemo.OpenIDConnect.token_callback/4
+    token_callback: &PlugoidDemo.OpenIDConnect.token_callback/5
 
   pipeline :browser do
     plug :accepts, ["html"]

@@ -48,7 +48,7 @@ defmodule PlugoidDemo.MixProject do
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:plug_cowboy, "~> 2.0"},
-      {:plugoid, "~> 0.0"},
+      {:plugoid, "~> 0.5.0"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"}
     ]
